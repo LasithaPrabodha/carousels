@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Animated Vertical Carousel</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <section class="vertical-slide-wrapper">
+      <div class="container-fluid">
+        <div id="vertCarousel" class="carousel vert slide">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#vertCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#vertCarousel" data-slide-to="1"></li>
+            <li data-target="#vertCarousel" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="carousel-item item1 active">
+              <div class="fill" style="background-color: #48c3af">
+                <div class="inner-content">
+                  <div class="top">
+                    <h1 class="">Meet Brandi</h1>
+                    <h3>/creative one page template</h3>
+                    <div class="d-flex">
+                      <span>---</span>
+                      <h4>We are a team of professionals</h4>
+                      <span>---</span>
+                    </div>
+                  </div>
+                  <div class="bottom">
+                    <h5>t</h5>
+                    <h5>f</h5>
+                    <h5>g</h5>
+                    <h5>o</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item item2">
+              <div class="fill" style="background-color: #b33f4a">
+                <div class="inner-content">
+                  <div class="top">
+                    <h1 class="">Meet Brandi</h1>
+                    <h3>/creative one page template</h3>
+                    <div class="d-flex">
+                      <span>---</span>
+                      <h4>We are a team of professionals</h4>
+                      <span>---</span>
+                    </div>
+                  </div>
+                  <div class="bottom">
+                    <h5>t</h5>
+                    <h5>f</h5>
+                    <h5>g</h5>
+                    <h5>o</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item item3">
+              <div class="fill" style="background-color: #7fc2f4">
+                <div class="inner-content">
+                  <div class="top">
+                    <h1 class="">Meet Brandi</h1>
+                    <h3>/creative one page template</h3>
+                    <div class="d-flex">
+                      <span>---</span>
+                      <h4>We are a team of professionals</h4>
+                      <span>---</span>
+                    </div>
+                  </div>
+                  <div class="bottom">
+                    <h5>t</h5>
+                    <h5>f</h5>
+                    <h5>g</h5>
+                    <h5>o</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    $(document).ready(function () {
+      // invoke the carousel
+      $('#vertCarousel').carousel({
+        interval: 3000,
+      });
+      // scroll slides on mouse scroll
+      $('#vertCarousel').bind('mousewheel DOMMouseScroll', function (e) {
+        if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+          $(this).carousel('prev');
+        } else {
+          $(this).carousel('next');
+        }
+      });
+      //scroll slides on swipe for touch enabled devices
+      $('#vertCarousel').on('touchstart', function (event) {
+        var yClick = event.originalEvent.touches[0].pageY;
+        $(this).one('touchmove', function (event) {
+          var yMove = event.originalEvent.touches[0].pageY;
+          if (Math.floor(yClick - yMove) > 1) {
+            $('.carousel').carousel('next');
+          } else if (Math.floor(yClick - yMove) < -1) {
+            $('.carousel').carousel('prev');
+          }
+        });
+        $('.carousel').on('touchend', function () {
+          $(this).off('touchmove');
+        });
+      });
+    });
+  </script>
+</html>
