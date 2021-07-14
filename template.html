@@ -90,11 +90,179 @@
         </div>
       </div>
     </section>
+    <section class="features-slide-wrapper">
+      <div class="container">
+        <h4>Features</h4>
+        <div id="featCarousel" class="carousel vert slide">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#featCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#featCarousel" data-slide-to="1"></li>
+            <li data-target="#featCarousel" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="carousel-item item1 active">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="row">
+                    <div class="col-2">
+                      <h1>O</h1>
+                    </div>
+                    <div class="col-10 pl-0">
+                      <h2>Branding</h2>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet ante non sem
+                        pellentesque volutpat.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="row">
+                    <div class="col-2">
+                      <h1>O</h1>
+                    </div>
+                    <div class="col-10 pl-0">
+                      <h2>Development</h2>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet ante non sem
+                        pellentesque volutpat.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="row">
+                    <div class="col-2">
+                      <h1>O</h1>
+                    </div>
+                    <div class="col-10 pl-0">
+                      <h2>Consulting</h2>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet ante non sem
+                        pellentesque volutpat.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item item2">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="row">
+                    <div class="col-2">
+                      <h1>O</h1>
+                    </div>
+                    <div class="col-10 pl-0">
+                      <h2>Branding</h2>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet ante non sem
+                        pellentesque volutpat.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="row">
+                    <div class="col-2">
+                      <h1>O</h1>
+                    </div>
+                    <div class="col-10 pl-0">
+                      <h2>Development</h2>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet ante non sem
+                        pellentesque volutpat.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="row">
+                    <div class="col-2">
+                      <h1>O</h1>
+                    </div>
+                    <div class="col-10 pl-0">
+                      <h2>Consulting</h2>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet ante non sem
+                        pellentesque volutpat.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item item3">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="row">
+                    <div class="col-2">
+                      <h1>O</h1>
+                    </div>
+                    <div class="col-10 pl-0">
+                      <h2>Branding</h2>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet ante non sem
+                        pellentesque volutpat.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="row">
+                    <div class="col-2">
+                      <h1>O</h1>
+                    </div>
+                    <div class="col-10 pl-0">
+                      <h2>Development</h2>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet ante non sem
+                        pellentesque volutpat.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="row">
+                    <div class="col-2">
+                      <h1>O</h1>
+                    </div>
+                    <div class="col-10 pl-0">
+                      <h2>Consulting</h2>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet ante non sem
+                        pellentesque volutpat.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="works-slide-wrapper">
+      <div class="container">
+        <h4>Works</h4>
+        <p>
+          Aenean sit amet ante non sem pellentesque volutpat. Curabitur convallis luctus leo, gravida dapibus tellus
+          tincidunt eu. In hac habitasse platea dictumst
+        </p>
+      </div>
+    </section>
   </body>
   <script>
     $(document).ready(function () {
       // invoke the carousel
       $('#vertCarousel').carousel({
+        interval: 3000,
+      });
+      $('#featCarousel').carousel({
         interval: 3000,
       });
       // scroll slides on mouse scroll

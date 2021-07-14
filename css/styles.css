@@ -32,8 +32,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 80px;
-  margin-bottom: 40px;
+  margin-top: 8em;
+  margin-bottom: 4em;
 }
 
 .vertical-slide-wrapper .inner-content .bottom h5 {
@@ -139,4 +139,58 @@
   .vertical-slide-wrapper .carousel-item h1 {
     font-size: 24px;
   }
+}
+
+.features-slide-wrapper {
+  padding-top: 8em;
+  padding-bottom: 10em;
+  background: #eee;
+}
+
+.features-slide-wrapper h4 {
+  margin-bottom: 4em;
+  text-align: center;
+}
+
+/*------------------------------- features carousel indicators ------------------------------*/
+.features-slide-wrapper .carousel-indicators {
+  position: absolute;
+
+  bottom: -80px;
+  margin: auto;
+  height: 20px;
+  right: 0;
+  left: 0;
+
+  width: auto;
+}
+.features-slide-wrapper .carousel-indicators li {
+  width: 8px;
+  height: 8px;
+  display: block;
+  margin-bottom: 5px;
+  border: 1px solid #00a199;
+  border-radius: 50%;
+}
+.features-slide-wrapper .carousel-indicators li::before {
+  height: 100%;
+  top: 0;
+}
+.features-slide-wrapper .carousel-indicators li::after {
+  height: 100%;
+  bottom: 0px;
+}
+.features-slide-wrapper .carousel-indicators li.active {
+  margin-bottom: 5px;
+  background: #00a199;
+}
+
+.works-slide-wrapper {
+  padding-top: 8em;
+  padding-bottom: 10em;
+}
+
+.works-slide-wrapper h4 {
+  margin-bottom: 2em;
+  text-align: center;
 }
